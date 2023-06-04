@@ -8,7 +8,27 @@ echo -e "\E[44;1;37m    INSTALAR PAINEL PWEB SWIT-T     \E[0m"
 echo ""
 echo -e "                 \033[1;31mBy @swittecnologia\033[1;36m"
 echo ""
-echo -ne "\n\033[1;32mDE UM ENTER PARA \033[1;33mCONTINUAR...\033[1;37m: "; read -r
+chave=$(curl -sSL "https://raw.githubusercontent.com/srSPEEDiness/PWEBTESTE/main/install/chave") &>/dev/null
+
+
+
+read -p "DIGITE A CHAVE DE INSTALAÇÃO: " key
+    
+         if [[ "$key" = "$chave" ]]
+         then
+               echo -e "[*] VALIDANDO A CHAVE DE INSTALAÇÃO"
+                sleep 2
+                echo $key > /bin/chave_inst
+                echo -e "[*] CHAVE ACEITA"
+                sleep 2
+            else
+            echo "[-] ESSA CHAVE NÃO É VÁLIDA!"
+            sleep 3
+            clear
+            cat /dev/null > ~/.bash_history && history -c
+            rm /bin/ubuinst* > /dev/null 2>&1
+            exit;
+          fi
 clear
 echo -e "\n\033[1;36mINICIANDO INSTALAÇÃO \033[1;33mAGUARDE..."
 apt-get install figlet -y > /dev/null 2>&1
