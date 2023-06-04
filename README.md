@@ -1,7 +1,7 @@
 # 👨‍💻 PAINELWEB GESTOR-SSH SWIT-T
 ⚠ SISTEMAS SUPORTADOS: (DEBIAN 8, UBUNTU 14 E UBUNTU 18!).⚠ </br>
 ⚠  VPS RECOMENDADA PARA PAINEL WEB: https://www.oneclickhosting.com.br⚠
-Cupom de desconto --->> #parceiro461934
+<br>Cupom de desconto --->> #parceiro461934
 ```
 apt update -y; apt upgrade -y; apt install wget -y; bash <(wget -qO- https://github.com/srSPEEDiness/NEWPWEB/raw/main/gestorssh/instpainel.sh)
 ```
